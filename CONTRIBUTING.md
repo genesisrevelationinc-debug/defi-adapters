@@ -42,21 +42,21 @@ git push origin fix/some-bug-#123
 
 ```bash
 yarn test
-yarn prettier
-yarn lint
-```
+6. Maintainers will review your code and possibly ask for changes before your code is pulled in to the main repository. We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of opty.fi's defi-adapters.
+
+_IMPORTANT_ Please pay attention to the maintainer's feedback, since its a necessary step to keep up with the standards opty.fi's defi-adapters attains to.
+
+### Bounty Submission for Convex Finance Integration
+
+- Implement a DeFi adapter for Convex Finance that allows depositing CRV, CVX, and Curve LP tokens.
+- Ensure the adapter implements the necessary interfaces from [IAdapter.sol](./contracts/opty/interfaces/defiAdapters/IAdapter.sol).
+- Write unit tests with 100% coverage for the adapter.
+- Follow the [contribution guide](CONTRIBUTING.md) for submission details.
+
+## All set!
+
 If you have any questions, feel free to post them to github.com/opty-fi/defi-adapters/issues.
-
-Thanks for your time and code!
-
-## Bounty Submission for Convex Finance Integration
-
-- Implement a DeFi adapter for Convex Finance following the [IAdapter.sol](./contracts/opty/interfaces/defiAdapters/IAdapter.sol) interface.
-- Ensure the adapter can deposit CRV, CVX, and Curve LP tokens into Convex Finance.
-- Write unit tests with 100% test coverage.
-- Submit a pull request following the [contribution guide](CONTRIBUTING.md).
-
-[guidelines]: GUIDELINES.md
+_IMPORTANT_ Read the PR template very carefully and make sure to follow all the instructions. These instructions
 refer to some very important conditions that your PR must meet in order to be accepted, such as making sure that all tests pass, JS linting tests pass, Solidity linting tests pass, etc.
 
 6. Maintainers will review your code and possibly ask for changes before your code is pulled in to the main repository. We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of opty.fi's defi-adapters.
