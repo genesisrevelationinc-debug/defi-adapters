@@ -45,10 +45,18 @@ yarn test
 yarn prettier
 yarn lint
 ```
+If you have any questions, feel free to post them to github.com/opty-fi/defi-adapters/issues.
 
-5. Go to [github.com/opty-fi/defi-adapters](https://github.com/opty-fi/defi-adapters) in your web browser and issue a new pull request.
+Thanks for your time and code!
 
-_IMPORTANT_ Read the PR template very carefully and make sure to follow all the instructions. These instructions
+## Bounty Submission for Convex Finance Integration
+
+- Implement a DeFi adapter for Convex Finance following the [IAdapter.sol](./contracts/opty/interfaces/defiAdapters/IAdapter.sol) interface.
+- Ensure the adapter can deposit CRV, CVX, and Curve LP tokens into Convex Finance.
+- Write unit tests with 100% test coverage.
+- Submit a pull request following the [contribution guide](CONTRIBUTING.md).
+
+[guidelines]: GUIDELINES.md
 refer to some very important conditions that your PR must meet in order to be accepted, such as making sure that all tests pass, JS linting tests pass, Solidity linting tests pass, etc.
 
 6. Maintainers will review your code and possibly ask for changes before your code is pulled in to the main repository. We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of opty.fi's defi-adapters.
