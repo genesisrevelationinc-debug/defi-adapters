@@ -37,24 +37,24 @@ yarn install
 - A DeFi Adapter smart contract requires implementation of following interfaces :
   - [IAdapter.sol](./contracts/opty/interfaces/defiAdapters/IAdapter.sol) **(Mandatory)**
   - [IAdapterHarvestReward.sol](./contracts/opty/interfaces/defiAdapters/IAdapterHarvestReward.sol) **(Optional)**
+  - [IAdapterStaking.sol](./contracts/opty/interfaces/defiAdapters/IAdapterStaking.sol) **(Optional)**
+  - [IAdapterBorrow.sol](./contracts/opty/interfaces/defiAdapters/IAdapterBorrow.sol) **(Optional)**
+  - [IAdapterInvestmentLimit.sol](./contracts/opty/interfaces/defiAdapters/IAdapterInvestmentLimit.sol) **(Optional)**
+
 
 ## Getting started
 
 ### Bounty Submission for Convex Finance Integration
 
-- Implement a DeFi adapter for Convex Finance that allows depositing CRV, CVX, and Curve LP tokens.
-- Ensure the adapter implements the necessary interfaces from [IAdapter.sol](./contracts/opty/interfaces/defiAdapters/IAdapter.sol).
-- Write unit tests with 100% coverage for the adapter.
-- Follow the [contribution guide](CONTRIBUTING.md) for submission details.
-
+- Implement a DeFi adapter for Convex Finance following the [IAdapter.sol](./contracts/opty/interfaces/defiAdapters/IAdapter.sol) interface.
+- Ensure the adapter can deposit CRV, CVX, and Curve LP tokens into Convex Finance.
+- Write unit tests with 100% test coverage.
+- Submit a pull request following the [contribution guide](CONTRIBUTING.md).
 
 ### Development Setup
 
 - Create a `.env` file and set a BIP-39 compatible mnemonic as an environment variable. Follow the example in `.env.example`. If you don't already have a mnemonic, use this [website](https://iancoleman.io/bip39/) to generate one.
-#### Implementing `IAdapter` interface
-
-- Implement an adapter contract using above interface(s) similar to [HarvestFinanceAdapter.sol](./contracts/1_ethereum/harvest.finance/HarvestFinanceAdapter.sol)
-
+- You are only required to get the archive node URL of the network which is being used for developing/testing of defi Adapters.
 #### Unit Tests
 
 - Write unit tests for all the functions across all the pool contracts gathered in Step 1.
