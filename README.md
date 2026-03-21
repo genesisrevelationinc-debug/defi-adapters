@@ -41,12 +41,20 @@ yarn install
   - [IAdapterBorrow.sol](./contracts/opty/interfaces/defiAdapters/IAdapterBorrow.sol) **(Optional)**
   - [IAdapterInvestmentLimit.sol](./contracts/opty/interfaces/defiAdapters/IAdapterInvestmentLimit.sol) **(Optional)**
 
-> Pro Tip : Inherit IAdapterFull interface from [IAdapterFull.sol](./contracts/opty/interfaces/defiAdapters/IAdapterFull.sol) to Adapter Contract if the protocol you choose required implementation of all the above interfaces.
 
-#### Implementing `IAdapter` interface
+## Getting started
 
-- Implement an adapter contract using above interface(s) similar to [HarvestFinanceAdapter.sol](./contracts/1_ethereum/harvest.finance/HarvestFinanceAdapter.sol)
+### Bounty Submission for Convex Finance Integration
 
+- Implement a DeFi adapter for Convex Finance following the [IAdapter.sol](./contracts/opty/interfaces/defiAdapters/IAdapter.sol) interface.
+- Ensure the adapter can deposit CRV, CVX, and Curve LP tokens into Convex Finance.
+- Write unit tests with 100% test coverage.
+- Submit a pull request following the [contribution guide](CONTRIBUTING.md).
+
+### Development Setup
+
+- Create a `.env` file and set a BIP-39 compatible mnemonic as an environment variable. Follow the example in `.env.example`. If you don't already have a mnemonic, use this [website](https://iancoleman.io/bip39/) to generate one.
+- You are only required to get the archive node URL of the network which is being used for developing/testing of defi Adapters.
 #### Unit Tests
 
 - Write unit tests for all the functions across all the pool contracts gathered in Step 1.
